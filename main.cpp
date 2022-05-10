@@ -42,7 +42,7 @@ int main() {
             case 1: {launchProgram(filename_exe, filename); }break;
             case 2: {showCode(filename); }break;
             case 3: {editProgram(filename); }break;
-            case 4: {}break;
+            case 4: {changeColor(filename); }break;
             defaulr:exit(0);
             }
             

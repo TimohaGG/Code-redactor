@@ -59,7 +59,7 @@ void replaceStr(string& filename) {
         f3 << "\n";
     }
     f3.close();
-   
+    delete[] buf;
 }
 
 void addCode(string filename) {
@@ -77,6 +77,49 @@ void addCode(string filename) {
 
     } while (true);
     f1.close();
+}
+
+void changeColor(string filename)
+{
+    ifstream f1(filename, ios::in);
+    string buffer;
+    int counter = 0;
+    while (getline(f1, buffer)) {
+        counter++;
+
+    }
+    f1.close();
+    ifstream f2(filename, ios::in);
+    string* buf = new string[counter];
+    for (size_t i = 0; i < counter; i++)
+    {
+        getline(f2, buf[i]);
+    }
+    f2.close();
+    cout << "Какой цвет текста хотите?"<<endl;
+    cout << "1. Green"<<endl;
+    cout << "2. Red" << endl;
+    cout << "3. Purple" << endl;
+    int choise;
+    string color;
+    cin >> choise;
+    switch (choise) {
+    case 1: color = "A";
+        break;
+    case 2: color = "C";
+        break;
+    case 3: color = "D";
+        break;
+    }
+    ofstream f3(filename, ios::out);
+    f3 << "#include<windows.h>" << "\n";
+    for (size_t i = 0; i < counter; i++)
+    {
+        f3 << buf[i]<<"\n";
+        if (buf[i] == "int main()" || buf[i] == "int main(){") {
+            f3 << "system(\"Color 0" << color << "\");";
+        }
+    }
 }
 
 int editProgram(string filename) {

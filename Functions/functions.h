@@ -23,3 +23,4 @@ void launchProgram(string filename_exe, string filename);
 int editProgram(string filename);
 void showCode(string filename);
 void addCode(string filename);
+void changeColor(string filename);
