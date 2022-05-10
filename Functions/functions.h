@@ -2,6 +2,8 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<stdio.h>
+
 
 using std::cin;
 using std::cout;
@@ -14,8 +16,10 @@ using std::fstream;
 
 
 
-#define clear system("cls")
+#define CLEAR system("cls")
 #define pause system("pause")
 
 void launchProgram(string filename_exe, string filename);
-void editProgram(string filename_exe, string filename);
+int editProgram(string filename);
+void showCode(string filename);
+void addCode(string filename);
