@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Functions">
+      <UniqueIdentifier>{5a8c5913-9af6-4b55-9faa-5ef3dba3cdb8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Functions\functions.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions\functions.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
