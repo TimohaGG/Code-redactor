@@ -43,7 +43,7 @@ int main() {
             case 2: {showCode(filename); }break;
             case 3: {editProgram(filename); }break;
             case 4: {changeColor(filename); }break;
-            defaulr:exit(0);
+            default:exit(0);
             }
             
            

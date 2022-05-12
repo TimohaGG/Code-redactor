@@ -24,3 +24,5 @@ int editProgram(string filename);
 void showCode(string filename);
 void addCode(string filename);
 void changeColor(string filename);
+int CountLines(string filename);
+bool FindStr(string filename,string phrase);
