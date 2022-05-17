@@ -1,12 +1,32 @@
 #include"functions.h"
 
 void showCode(string filename) {
+    bool tab = false;
     cout << "Ваш код: " << endl;
     ifstream f1(filename, ios::in);
     string buffer;
-    while (getline(f1,buffer)) {
-        cout << buffer<<endl;
+    for (size_t i = 0; getline(f1, buffer); i++)
+    {
+        if (buffer.find("{") != string::npos) {
+            cout << i << "    " << buffer << endl;
+            tab = true;
+            continue;
+        }
+           
+        else if (buffer.find("}") != string::npos) {
+            tab = false;
+            cout << i<<"    " << buffer << endl;
+            continue;
+        }
+           
+        cout << i << "    ";
+        if (tab)
+            cout << "    " << buffer<<endl;
+        else
+            cout << buffer<<endl;
+        
     }
+   
 }
 
 void launchProgram(string filename_exe, string filename) {

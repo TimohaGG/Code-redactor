@@ -1,11 +1,10 @@
 #include<iostream>
-#include<windows.h>
 using namespace std;
 int main(){
-system("Color 0D");
+for (size_t i = 0; i < 3; i++)
+{
 cout << "Hello" << endl;
-system("pause");
 }
-
-
-
+system("pause");
+return 0;
+}
